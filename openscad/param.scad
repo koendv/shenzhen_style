@@ -12,7 +12,8 @@ eps1 = 0.001; // "epsilon", small value to avoid collisions
 eps2 = 2 * eps1;
 
 // Choose syringe model
-include <syringe-10cc-bd.scad>;
+//include <syringe-10cc-bd.scad>;
+include <syringe-10cc-nordson.scad>;
 
 // Choose canstack stepper model
 // Robotdigg NC35-BYZ-120
