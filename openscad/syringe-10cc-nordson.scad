@@ -87,7 +87,7 @@ module plunger_body() {
 }
 
 // compare plunger with piston
-if (1) {
+if (0) {
     cutout() plunger_body();
     cutout() %piston();
 }
