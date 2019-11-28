@@ -40,13 +40,11 @@ module plunger_section() {
 }   
 
 module plunger_body() {
-    tweak=0.2; // tweak for fdm printer with 0.4mm nozzle
     max_size = 100.0;
     rotate_extrude(convexity = 10) // rotate extrude piston section to 3d body
     rotate([0, 0, 90])
     intersection() {
         square(max_size);
-        tweak = 0.2;
         offset(-tweak) // shrink plunger_section for fdm printer tolerance
         union() {
             plunger_section();

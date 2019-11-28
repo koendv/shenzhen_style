@@ -11,8 +11,6 @@ syringe_luer_dia = 11.14;
 
 module plunger_body() {
         
-
-    tweak = 0.2; // tweak for fdm printer with 0.4mm printhead
     r1 = syringe_int_dia/2 - clearance_fit;
     r2 = 5.73246 - tweak;
     h1 = 7.0;

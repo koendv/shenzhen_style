@@ -52,13 +52,12 @@ module plunger_cut() {
 }
 
 module plunger_body() {
-    printer_tweak=0.2;
     max_size=100.0;
     difference() {
         rotate_extrude(convexity=10)
         rotate([0, 0, 90])
         intersection() {
-            offset(-printer_tweak) {
+            offset(-tweak) {
                 plunger_section();
                 mirror([1, 0, 0]) plunger_section();
             }

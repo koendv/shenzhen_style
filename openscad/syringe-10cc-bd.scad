@@ -1,7 +1,6 @@
 // Syringe specs
     
 // 10 ml BD luer lok
-syringe_model = 1;
 syringe_volume = 10.0; // milliliter (or cc)
 syringe_flange_dia = 28.0;
 syringe_flange_thickness = 1.9;
