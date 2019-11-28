@@ -18,7 +18,7 @@ module torus(r_maj, r_min) {
 // Piston for 5cc Chip Quik solder paste/flux syringe. 
 
 module plunger_body() {
-    r2 = 2.50;  // curvature of tip
+    r2 = 3.0;  // curvature of tip
     h1 = 15.0;  // height body
     r1 = 12.0/2;
     chamfer = 0.5; // chamfer at bottom
@@ -36,5 +36,5 @@ module plunger_body() {
     }
 }
 
-plunger_body();
+//plunger_body();
 // not truncated 
