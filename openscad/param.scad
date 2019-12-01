@@ -1,10 +1,11 @@
 // process variables
 
-clearance_fit = 0.5;
-tight_fit = 0.2;
+clearance_fit = 0.4;      // approx. 2 x layer z height
+tight_fit = 0.2;          // approx. half clearance fit
+tweak=0.2;                // tweak for fdm printer with 0.4mm nozzle
+tweak_insert=0.2;         // tweak threaded insert hole to compensate for printer tolerance. bigger value = bigger hole.
 min_wall_thickness = 2.0; // minimum desired wall thickness, conservative value
-chamfer = 0.5;
-tweak=0.2; // tweak for fdm printer with 0.4mm nozzle
+chamfer = 0.5;            // chamfer to avoid fdm elephant's foot
 
 // general variables
 //$fn = 128; // high resolution for rendering
@@ -17,8 +18,6 @@ include <syringe-10cc-generic.scad>;
 //include <syringe-10cc-bd.scad>;
 //include <syringe-10cc-nordson-flat.scad>;
 //include <syringe-10cc-nordson-wiper.scad>;
-//include <syringe-5cc-generic.scad>;
-//include <syringe-5cc-nordson-wiper.scad>;
 
 // Choose canstack stepper model
 // Robotdigg NC35-BYZ-120

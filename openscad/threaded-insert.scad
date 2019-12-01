@@ -42,22 +42,19 @@ module m3_threaded_insert(length = 0.0) {
     // measure insert top diameter, bottom diameter, and insert length with a caliper.
     // adjust insert_top_dia, insert_bottom_dia, and insert_length in the code.
     
-    // tweak diameters to compensate printer tolerance.
-    tolerance = 0.25; // for prusa i3 mk3
-
     // Insert models. Uncomment one.
     
     // Chinese no-name M3 x D5.0 x L6.0
     // https://www.aliexpress.com/item/32842432056.html
     // https://www.aliexpress.com/item/4000232858343.html
     // check insert top diameter, bottom diameter, and insert length with a caliper before using.
-    threaded_insert(insert_top_dia = 5.0 + tolerance, insert_bottom_dia = 4.0 + tolerance, insert_length = 6.0, taper_angle = 8.0, screw_hole_dia = 3.5, screw_hole_length = length);
+    threaded_insert(insert_top_dia = 5.0 + tweak_insert, insert_bottom_dia = 4.0 + tweak_insert, insert_length = 6.0, taper_angle = 8.0, screw_hole_dia = 3.5, screw_hole_length = length);
 
     // Mc-Master 94180A333
     // https://www.mcmaster.com/94180a333
     // E-Z LOK DV-M30-TH
     // https://www.amazon.com/initeq-M3-0-5-Threaded-Inserts-Printing/dp/B077CGVS7Y
-    //threaded_insert(insert_top_dia = 5.6 + tolerance, insert_bottom_dia = 4.8 + tolerance, insert_length = 6.4, taper_angle = 8.0, screw_hole_dia = 3.5, screw_hole_length = length);
+    //threaded_insert(insert_top_dia = 5.6 + tweak_insert, insert_bottom_dia = 4.8 + tweak_insert, insert_length = 6.4, taper_angle = 8.0, screw_hole_dia = 3.5, screw_hole_length = length);
     
 }
 
