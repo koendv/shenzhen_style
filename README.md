@@ -2,9 +2,19 @@
 
 ![](doc/assembly-drawing.png) 
 
-A 10cc glue dispenser.
+A 10cc glue dispenser. Designed to have a low number of pieces. Simple to solder, and easy to assemble. Plungers for 10cc BD Luer-Lok, 10cc Chinese generic "Mechanic", and 10cc Nordson.
+
+Cutout view of the assembled dispenser: [3D assembly view](stl/assembly.stl)
 
 ## Bill of Materials
+### 3D-Printed
+Three workpieces printed in ABS using FDM:
+
+- [body](stl/body.stl)
+- [syringe holder](stl/syringe_holder.stl)
+- [plunger](stl/plunger.stl)
+
+### Dispenser
 
 Quantity|Item
 --------|----
@@ -14,12 +24,20 @@ Quantity|Item
 2|[M4x25mm screw](https://www.aliexpress.com/item/4000197066058.html)
 2|[M4 nut](https://www.aliexpress.com/item/32959149109.html)
 
-and three workpieces printed in ABS using FDM:
+### Controller 
 
-- [body](stl/body.stl)
-- [syringe holder](stl/syringe_holder.stl)
-- [plunger](stl/plunger.stl)
+Quantity|Item
+--------|----
+1|[PCB](https://jlcpcb.com/)
+1|[STM32F103C8T6 Blue Pill](http://www.aliexpress.com/item/32981849126.html)
+1|[TMC2130 Silent Stepstick](https://www.aliexpress.com/item/32970150483.html)
+1|[Mini dc-dc converter 24V to 5v](https://www.aliexpress.com/item/32796268715.html)
+1|[0.96inch 128X64 I2C SSD1306 OLED WHITE/BLUE](https://www.aliexpress.com/item/32830523451.html)
+1|[EC11 Rotary Encoder with Button](https://www.aliexpress.com/item/32915420023.html)
+1|[3.5mm headphone jack](https://www.aliexpress.com/item/4000309078079.html)
+1|[DC005 DC Power Jack 5.5mm dia, 2.5mm pin](https://www.aliexpress.com/item/4000034340966.html)
+2|Pushbutton 6x6mm
+1|Capacitor 47u/50V
+1|4-Pin Male header (Dupont or JST XH-4AK)
 
-Cutout view of the assembled dispenser: [3D assembly view](stl/assembly.stl)
-
-This is Work In Progress.
+*This is Work In Progress.*
