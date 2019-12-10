@@ -1,8 +1,6 @@
 // 10cc "Mechanic" solder paste/flux syringe.
 //include <param.scad>
 
-// generic syringe dimensions from syringe.csv
-
 syringe_volume = 10.0; // ml (or cc)
 syringe_flange_dia = 34.1;
 syringe_flange_thickness = 3.25;
@@ -22,8 +20,8 @@ module plunger_section() {
     r1 = 7.0;
     h1 = 8.0;
     r2 = 12.60/2;
-    h2 = 2.0;
-    r3 = 5.0;
+    h2 = 2.5;
+    r3 = 4.36/2;
 
     hull() {
         translate([h0+h1+h2, 0]) square(size=[eps1, r3]);
@@ -56,10 +54,10 @@ module plunger_rotate_extrude() {
 }
 
 module plunger_cutout() {
-    h_cutout = 2.75;
-    d_cutout = 5.0;
-    w_cutout = 0.5;
-    z_cutout = 16.0 - h_cutout;
+    h_cutout = 3.0;
+    d_cutout = 4.5;
+    w_cutout = 0.55;
+    z_cutout = 16.5 - h_cutout;
     
     translate([0, 0, z_cutout])
     linear_extrude(height = h_cutout + eps2)
@@ -78,8 +76,16 @@ module plunger_body() {
     }
 }
 
+if (0) {
+    projection(cut = true)
+    rotate([0, 90, 0])
+    rotate([0, 0, 45])
+    plunger_body();
+}
+  
 //plunger_section();
 //plunger_rotate_extrude();
 //plunger_cutout();
 //plunger_body();
+ 
 // not truncated 
