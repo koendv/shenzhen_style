@@ -16,7 +16,6 @@ eps2 = 2 * eps1;
 // Choose syringe model
 include <syringe-10cc-generic.scad>;
 //include <syringe-10cc-bd.scad>;
-//include <syringe-10cc-nordson-flat.scad>;
 //include <syringe-10cc-nordson-wiper.scad>;
 
 // Choose canstack stepper model
