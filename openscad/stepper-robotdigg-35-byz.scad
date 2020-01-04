@@ -3,7 +3,7 @@
 // https://www.robotdigg.com/product/1147/12V-35-captive-or-non-captive-linear-pm-stepper-motor
 
 stepper_screw_spacing = 42.0;
-stepper_screw_dia = 4.0; // M4 screws
+stepper_screw_dia = 4.4; // M4 screws
 stepper_length = 50.0;
 stepper_width = 35.0;
 stepper_height = 21.0;
