@@ -26,6 +26,8 @@ Quantity|Item
 
 ### Controller 
 
+[Schematic and board layout at easyeda](http://easyeda.com/koendv/stepper-controller).
+
 Quantity|Item
 --------|----
 1|[PCB](https://jlcpcb.com/)
@@ -39,5 +41,6 @@ Quantity|Item
 2|Pushbutton 6x6mm
 1|Capacitor 47u/50V
 1|4-Pin Male header (Dupont or JST XH-4AK)
+
 
 *This is Work In Progress.*
