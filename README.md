@@ -14,6 +14,8 @@ Three workpieces printed in ABS using FDM:
 - [syringe holder](stl/syringe_holder.stl)
 - [plunger](stl/plunger.stl)
 
+Leave part orientation as is when imported into PrusaSlicer. Designed to print without support.
+
 ### Dispenser
 
 Quantity|Item
