@@ -8,7 +8,7 @@ Cutout view of the assembled dispenser: [3D assembly view](stl/assembly.stl)
 
 ## Bill of Materials
 ### 3D-Printed
-Three workpieces printed in ABS using FDM:
+Workpieces printed in ABS using FDM:
 
 - [body](stl/body.stl)
 - [syringe holder](stl/syringe_holder.stl)
