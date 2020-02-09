@@ -43,7 +43,7 @@ For the hand-held dispenser:
 For the dispenser mounted in a CNC 3018:
 - Put the syringe in the [adapter for cnc 3018](stl/cnc3018_adapter.stl).
 - Join stepper motor, [body](stl/body.stl), and cnc 3018 adapter with the M4x25 screws.
-- Put this dispenser in the CNC 3018 z-carriage.
+- Put the dispenser in the CNC 3018 z-carriage. The dispenser has the same diameter as the router spindle, 42mm, .
 - Connect the glue dispenser stepper to RAMPS as an extruder (E0/E1).
 - Dispensing glue is done by printing a g-code file, like a 3d printer.
 
