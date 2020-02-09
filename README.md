@@ -14,6 +14,7 @@ Workpieces printed in ABS using FDM:
 - [syringe holder](stl/syringe_holder.stl)
 - [adapter for cnc 3018](stl/cnc3018_adapter.stl)
 - [plunger](stl/plunger.stl)
+- [insert_practice](stl/insert_practice.stl)
 
 Leave part orientation as is when imported into PrusaSlicer. Designed to print without support.
 
@@ -22,15 +23,31 @@ Leave part orientation as is when imported into PrusaSlicer. Designed to print w
 Quantity|Item
 --------|----
 1|[Robotdigg NC35-BYZ-120](https://www.robotdigg.com/product/1147/12V-35-captive-or-non-captive-linear-pm-stepper-motor) non-captive linear stepper, 7.5°/step
-1|[BD "Luer-lok" 10cc syringe](https://www.aliexpress.com/item/32851064915.html)
+1|[10cc industrial glue dispenser syringes](https://www.aliexpress.com/item/33025919381.html) with Luer tips. 
 1|[M3 x 5.0mm O.D. x 6.0mm L threaded knurled brass insert](https://www.aliexpress.com/item/4000232858343.html)
 2|[M4x25mm screw](https://www.aliexpress.com/item/4000197066058.html)
 2|[M4 nut](https://www.aliexpress.com/item/32959149109.html)
 
-### CNC 3018 adapter
-On the cnc 3018, connect the glue dispenser stepper to RAMPS as an extruder (E0/E1). Dispensing glue is done by printing a g-code file, like a 3d printer.
+## Assembly
+- Set your soldering iron to the filament extrusion temperature used during 3D printing, about 255°C for ABS.
+- Take the workpiece [insert_practice](stl/insert_practice.stl) and place 4 heat-set inserts, as a test. 
+- Put an M3 threaded brass insert in the [plunger](stl/plunger.stl).
+- Screw the plunger on the stepper motor shaft.
+### Hand-held
+For the hand-held dispenser:
+- Put the syringe in the [syringe holder](stl/syringe_holder.stl)
+- Join stepper motor, [body](stl/body.stl), and syringe holder with the M4x25 screws.
+- Plug the glue dispenser stepper in the controller board.
 
-### Controller
+### CNC 3018 adapter
+For the dispenser mounted in a CNC 3018:
+- Put the syringe in the [adapter for cnc 3018](stl/cnc3018_adapter.stl).
+- Join stepper motor, [body](stl/body.stl), and cnc 3018 adapter with the M4x25 screws.
+- Put this dispenser in the CNC 3018 z-carriage.
+- Connect the glue dispenser stepper to RAMPS as an extruder (E0/E1).
+- Dispensing glue is done by printing a g-code file, like a 3d printer.
+
+## Controller
 The controller is only needed if you wish to use the glue dispenser as a stand-alone, hand-held device. 
 
 [Schematic and board layout at easyeda](http://easyeda.com/koendv/stepper-controller).
