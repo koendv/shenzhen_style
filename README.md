@@ -2,7 +2,7 @@
 
 ![](doc/assembly-drawing.png) 
 
-A 10cc glue dispenser. Designed to have a low number of pieces. Simple to solder, and easy to assemble. Plungers for 10cc BD Luer-Lok, 10cc Chinese generic "Mechanic", and 10cc Nordson. Adapter for CNC 3018.
+A 10cc glue dispenser. Designed to have a low number of pieces. Simple to solder, and easy to assemble. Plungers for 10cc Chinese generic "Mechanic", and 10cc Nordson. Adapter for CNC 3018.
 
 Cutout view of the assembled dispenser: [3D assembly view](stl/assembly.stl)
 
