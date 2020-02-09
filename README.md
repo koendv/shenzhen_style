@@ -2,7 +2,7 @@
 
 ![](doc/assembly-drawing.png) 
 
-A 10cc glue dispenser. Designed to have a low number of pieces. Simple to solder, and easy to assemble. Plungers for 10cc BD Luer-Lok, 10cc Chinese generic "Mechanic", and 10cc Nordson.
+A 10cc glue dispenser. Designed to have a low number of pieces. Simple to solder, and easy to assemble. Plungers for 10cc BD Luer-Lok, 10cc Chinese generic "Mechanic", and 10cc Nordson. Adapter for CNC 3018.
 
 Cutout view of the assembled dispenser: [3D assembly view](stl/assembly.stl)
 
@@ -12,6 +12,7 @@ Three workpieces printed in ABS using FDM:
 
 - [body](stl/body.stl)
 - [syringe holder](stl/syringe_holder.stl)
+- [adapter for cnc 3018](stl/cnc3018_adapter.stl)
 - [plunger](stl/plunger.stl)
 
 Leave part orientation as is when imported into PrusaSlicer. Designed to print without support.
@@ -26,7 +27,11 @@ Quantity|Item
 2|[M4x25mm screw](https://www.aliexpress.com/item/4000197066058.html)
 2|[M4 nut](https://www.aliexpress.com/item/32959149109.html)
 
-### Controller 
+### CNC 3018 adapter
+On the cnc 3018, connect the glue dispenser stepper to RAMPS as an extruder (E0/E1). Dispensing glue is done by printing a g-code file, like a 3d printer.
+
+### Controller
+The controller is only needed if you wish to use the glue dispenser as a stand-alone, hand-held device. 
 
 [Schematic and board layout at easyeda](http://easyeda.com/koendv/stepper-controller).
 

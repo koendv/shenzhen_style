@@ -3,6 +3,7 @@
 - [body](body.stl)
 - [syringe holder](syringe_holder.stl)
 - [plunger](plunger.stl)
+- [adapter for mounting on cnc3018](cnc3018_adapter.stl)
 
 If you wish to practice threaded inserts first, also print:
 

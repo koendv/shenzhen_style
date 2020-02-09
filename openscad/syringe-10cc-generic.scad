@@ -3,8 +3,9 @@
 
 syringe_volume = 10.0; // ml (or cc)
 syringe_flange_dia = 34.1;
+syringe_flange_width = 22.5;
 syringe_flange_thickness = 3.25;
-syringe_ext_dia = 18.4;
+syringe_ext_dia = 18.5;
 syringe_int_dia = 15.5;
 syringe_barrel_length = 91.2;
 syringe_empty_length = 77.5;

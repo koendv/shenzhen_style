@@ -15,7 +15,7 @@ show_syringe_contents = false;
 
 // valid values for position: 0 ... 1. 
 // realistic values for position: 0.2 ... 0.90
-module assembly(position = 0.5) {
+module assembly(position = 0.5, cnc3018=false) {
     
     //body
     cutout(cut)
@@ -33,18 +33,24 @@ module assembly(position = 0.5) {
     twice() nut(M4_nut);
     
     // syringe
-    translate([0, 0, -syringe_barrel_length])
+    translate([0, 0, -syringe_barrel_length + syringe_flange_thickness])
     rotate([0,0,90])
     syringe(model_contents = show_syringe_contents);
     
-    // syringe holder
-    translate([0, 0, -syringe_flange_thickness])
-    mirror([0, 0, 1])
-    cutout(cut)
-    syringe_holder();
-
+    if (cnc3018) {
+        // mount as cnc 3018 spindle
+        translate([0, 0, -cnc_adapter_total_height])
+        cnc3018_adapter();
+    } else {
+        // syringe holder
+        translate([0, 0, -eps2])
+        mirror([0, 0, 1])
+        cutout(cut)
+        syringe_holder();
+    }
+   
     // bottom M4 screws
-    translate([0, 0, -syringe_flange_thickness - syringe_holder_base_height])
+    translate([0, 0, - syringe_holder_base_height])
     color("silver")
     mirror([0, 0, 1])
     twice() screw(M4_cap_screw, 25);
@@ -91,6 +97,8 @@ module animation() {
 //assembly();
 //assembly(position = 0.21); // piston at syringe top
 //assembly(position = 0.92); // piston at syringe bottom
+//assembly(cnc3018=true, position = 0.70); // mounted in cnc3018
+
 //animation();
 
 //not truncated
