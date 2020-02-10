@@ -7,7 +7,7 @@ A 10cc glue dispenser. Designed to have a low number of pieces. Simple to solder
 Cutout view of the assembled dispenser: [3D assembly view](stl/assembly.stl)
 
 ## Bill of Materials
-### 3D-Printed
+### 3D-Printed Workpieces
 Workpieces printed in ABS using FDM:
 
 - [body](stl/body.stl)
@@ -18,7 +18,7 @@ Workpieces printed in ABS using FDM:
 
 Leave part orientation as is when imported into PrusaSlicer. Designed to print without support.
 
-### Dispenser
+### Dispenser Bill of materials
 
 Quantity|Item
 --------|----
@@ -41,7 +41,7 @@ For the hand-held dispenser:
 - Connect the glue dispenser stepper motor to the controller board.
 
 ### CNC 3018 adapter
-For the dispenser mounted in a CNC 3018:
+For the dispenser mounted in a CNC 3018 z-carriage:
 - Put the syringe in the [adapter for cnc 3018](stl/cnc3018_adapter.stl).
 - Join stepper motor, [body](stl/body.stl), and cnc 3018 adapter with the M4x25 screws.
 - Put the dispenser in the CNC 3018 z-carriage. The dispenser has the same diameter as the router spindle, 42mm. Tighten the screws of the z-carriage very lightly, or not at all.
