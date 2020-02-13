@@ -18,7 +18,7 @@ else if (model == 4)
 else if (model == 5)
     // position for printing
     translate([0, 0, cnc_adapter_total_height])
-    mirror([0, 0, 1])
+    rotate([180, 0, 0])
     cnc3018_adapter();
 else if (model == 10)
     assembly();

@@ -109,7 +109,7 @@ module cnc3018_adapter_body() {
 }
 
 module cnc3018_adapter_holes() {
-
+union() {
     // syringe body
     translate([0, 0, -eps2])
     cylinder(d = syringe_ext_dia + 2 * clearance_fit, h = cnc_adapter_total_height);
@@ -131,11 +131,12 @@ module cnc3018_adapter_holes() {
     translate([-screw_head_dia/2, stepper_screw_spacing/2, -eps2])
     cube([screw_head_dia, stepper_width, cnc_adapter_total_height-syringe_holder_base_height+eps2]);
 
+    // engrave diameter on body
     translate([syringe_ext_dia/2+(cnc_zcarriage_dia1-syringe_ext_dia)/4, 0, -eps2])
     mirror([0, 1, 0])
     rotate([0, 0, -90])
     small_text(str(cnc_zcarriage_dia1));
-
+}
 }
 
 module small_text(txt) {
