@@ -93,14 +93,18 @@ module cnc3018_adapter_body() {
     translate([0, 0, -eps1])
     cylinder(d = cnc_zcarriage_dia1, h = cnc_zcarriage_h1+eps2);
 
+    // retaining lip, avoid adapter falling through
+    lip = 1.2;
+    translate([0, 0, cnc_zcarriage_h1-lip-eps1])
+    cylinder(d = cnc_zcarriage_dia1+2*lip, h = lip+eps2);
+
     hull() {
         translate([0, 0, syringe_holder_total_height+cnc_zcarriage_h1-eps1])
         linear_extrude(height = syringe_holder_base_height)
         base_pattern();
 
         translate([0, 0, cnc_zcarriage_h1-eps1])
-        cylinder(d = cnc_zcarriage_dia1, h = eps1);
-
+        cylinder(d = cnc_zcarriage_dia1+2*lip, h = eps1);
     }
 }
 
@@ -116,8 +120,26 @@ module cnc3018_adapter_holes() {
 
     // M4 hex socket cap and washer
     screw_head_dia = 2 * stepper_screw_dia + 1; // valid washer size for M2, M2.5, M3, M3.5, M4.
+
     translate([0, 0, -eps2])
     twice() {cylinder(d = screw_head_dia, h = cnc_adapter_total_height-syringe_holder_base_height+eps2);}
+
+    translate([-screw_head_dia/2, stepper_screw_spacing/2, -eps2])
+    cube([screw_head_dia, stepper_width, cnc_adapter_total_height-syringe_holder_base_height+eps2]);
+
+    mirror([0, 1, 0])
+    translate([-screw_head_dia/2, stepper_screw_spacing/2, -eps2])
+    cube([screw_head_dia, stepper_width, cnc_adapter_total_height-syringe_holder_base_height+eps2]);
+
+    translate([syringe_ext_dia/2+(cnc_zcarriage_dia1-syringe_ext_dia)/4, 0, -eps2])
+    mirror([0, 1, 0])
+    rotate([0, 0, -90])
+    small_text(str(cnc_zcarriage_dia1));
+
+}
+
+module small_text(txt) {
+    linear_extrude(0.4) text(txt, size = 6, halign = "center", valign = "center");
 }
 
 if (0) {

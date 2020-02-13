@@ -9,8 +9,8 @@ include <plunger.scad>
 include <syringe.scad>
 
 include <NopSCADlib/lib.scad>
-
-cut = true;
+$fn=64;
+cut = false;
 show_syringe_contents = false;
 
 // valid values for position: 0 ... 1. 

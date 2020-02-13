@@ -31,7 +31,7 @@ syringe_holder_base_height = 3.0;
 syringe_holder_total_height = 6.0;
 
 // adapter for cnc3018
-cnc_zcarriage_dia1 = 42.0; // diameter of spindle hole
+cnc_zcarriage_dia1 = 45.0; // diameter of spindle hole. Common values: 45mm, 52mm.
 cnc_zcarriage_h1 = 40.0;   // height
 
 // not truncated
