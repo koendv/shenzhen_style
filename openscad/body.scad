@@ -109,7 +109,7 @@ module cnc3018_adapter_body() {
 }
 
 module cnc3018_adapter_holes() {
-union() {
+
     // syringe body
     translate([0, 0, -eps2])
     cylinder(d = syringe_ext_dia + 2 * clearance_fit, h = cnc_adapter_total_height);
@@ -136,7 +136,6 @@ union() {
     mirror([0, 1, 0])
     rotate([0, 0, -90])
     small_text(str(cnc_zcarriage_dia1));
-}
 }
 
 module small_text(txt) {
