@@ -30,7 +30,7 @@ module assembly(position = 0.5, cnc3018=false) {
     // top M4 screws
     translate([0, 0, body_height + stepper_base_thickness])
     color("silver")
-    twice() nut(M4_nut);
+    twice() screw(M4_cap_screw, 25);
     
     // syringe
     translate([0, 0, -syringe_barrel_length + syringe_flange_thickness])
@@ -53,7 +53,7 @@ module assembly(position = 0.5, cnc3018=false) {
     translate([0, 0, - syringe_holder_base_height])
     color("silver")
     mirror([0, 0, 1])
-    twice() screw(M4_cap_screw, 25);
+    twice() rotate([0, 0, 180/6]) nut(M4_nut);
  
     // leadscrew position
     leadscrew_position = max(min(position, 1.0), 0.0); // constrain to values between 0.0 and 1.0
@@ -97,7 +97,7 @@ module animation() {
 //assembly();
 //assembly(position = 0.21); // piston at syringe top
 //assembly(position = 0.92); // piston at syringe bottom
-//assembly(cnc3018=true, position = 0.70); // mounted in cnc3018
+//assembly(position = 0.70, cnc3018=true); // mounted in cnc3018
 
 //animation();
 

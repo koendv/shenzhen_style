@@ -120,16 +120,17 @@ module cnc3018_adapter_holes() {
 
     // M4 hex socket cap and washer
     screw_head_dia = 2 * stepper_screw_dia + 1; // valid washer size for M2, M2.5, M3, M3.5, M4.
+    m4_nut_dia = nut_flat_radius(M4_nut)*2 + clearance_fit;
 
     translate([0, 0, -eps2])
-    twice() {cylinder(d = screw_head_dia, h = cnc_adapter_total_height-syringe_holder_base_height+eps2);}
+    twice() {rotate([0, 0, 180/6]) cylinder_outer(d = m4_nut_dia, h = cnc_adapter_total_height-syringe_holder_base_height+eps2, fn=6);}
 
-    translate([-screw_head_dia/2, stepper_screw_spacing/2, -eps2])
-    cube([screw_head_dia, stepper_width, cnc_adapter_total_height-syringe_holder_base_height+eps2]);
+    translate([-m4_nut_dia/2, stepper_screw_spacing/2, -eps2])
+    cube([m4_nut_dia, stepper_width, cnc_adapter_total_height-syringe_holder_base_height+eps2]);
 
     mirror([0, 1, 0])
-    translate([-screw_head_dia/2, stepper_screw_spacing/2, -eps2])
-    cube([screw_head_dia, stepper_width, cnc_adapter_total_height-syringe_holder_base_height+eps2]);
+    translate([-m4_nut_dia/2, stepper_screw_spacing/2, -eps2])
+    cube([m4_nut_dia, stepper_width, cnc_adapter_total_height-syringe_holder_base_height+eps2]);
 
     // engrave diameter on body
     translate([syringe_ext_dia/2+(cnc_zcarriage_dia1-syringe_ext_dia)/4, 0, -eps2])

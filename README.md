@@ -2,7 +2,7 @@
 
 ![](doc/assembly-drawing.png) 
 
-A 10cc glue dispenser. Designed to have a low number of pieces. Simple to solder, and easy to assemble. Plungers for [10cc Chinese generic](https://www.google.com/search?q=10cc+Glue+Adhesive+Dispenser+Industrial+Syringe+Tube+Set+for+Industrial+Dispensing) , and 10cc Nordson. Adapter for CNC 3018.
+A 10cc glue dispenser. Designed to have a low number of pieces. Simple to solder, and easy to assemble. Plungers for [10cc Chinese generic](https://www.google.com/search?q=10cc+Glue+Adhesive+Dispenser+Industrial+Syringe+Tube+Set+for+Industrial+Dispensing) , and 10cc Nordson. Adapter for mounting the glue dispenser on a CNC 3018 router.
 
 Cutout view of the assembled dispenser: [3D assembly view](stl/assembly.stl)
 
